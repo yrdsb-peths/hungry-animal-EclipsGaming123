@@ -14,6 +14,9 @@ public class fly extends Actor
      */
     public void act() 
     {
+        int y = getY();
+        int x = getX();
         // Add your action code here.
+        setLocation(x,y + 2);
     }    
 }
