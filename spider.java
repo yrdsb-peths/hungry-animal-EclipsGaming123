@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class kawaii_spider extends Actor
+public class spider extends Actor
 {
     /**
      * Act - do whatever the kawaii_spider wants to do. This method is called whenever
@@ -19,19 +19,19 @@ public class kawaii_spider extends Actor
         int x = this.getX();
         if (Greenfoot.isKeyDown("a"))
         {
-            move(-2);
+            move(-3);
         }
         if (Greenfoot.isKeyDown("d"))
         {
-            move(2);
+            move(3);
         }
         if (Greenfoot.isKeyDown("w"))
         {
-            setLocation(x,y-2);
+            setLocation(x,y-3);
         }
         if (Greenfoot.isKeyDown("s"))
         {
-            setLocation(x,y+2);
+            setLocation(x,y+3);
         }
         
         eat();

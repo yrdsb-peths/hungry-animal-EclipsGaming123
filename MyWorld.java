@@ -17,16 +17,19 @@ public class MyWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600,600,1); 
-        kawaii_spider x = new kawaii_spider();
-        addObject(x,200,200);
+        spider x = new spider();
+        addObject(x,300,500);
         
-        fly z = new fly();
-        addObject(z,300,300);
+        createFly();
+        
+        Label score = new Label(0, 50);
+        addObject(score, 30,30);
     }
     
     public void createFly()
     {
+        int randomNumber = Greenfoot.getRandomNumber(500);
         fly fly = new fly();
-        addObject(fly, Greenfoot.getRandomNumber(600),Greenfoot.getRandomNumber(600));
+        addObject(fly, randomNumber + 100,0);
     }
 }
