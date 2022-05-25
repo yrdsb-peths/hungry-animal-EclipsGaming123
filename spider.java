@@ -8,10 +8,26 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class spider extends Actor
 {
+    GreenfootSound screech = new GreenfootSound("AWTQTLF-alien-creature-short-screech-or-scream-1.mp3");
+    GreenfootImage[] idle = new GreenfootImage[3];
     /**
      * Act - do whatever the kawaii_spider wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    public spider()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                idle[i] = new GreenfootImage("images/idle" + i + ".png");
+            }
+            
+            setImage(idle[0]);
+        }
+    }
+    
+    
     public void act() 
     {
         // Add your action code here.
@@ -45,6 +61,7 @@ public class spider extends Actor
             MyWorld world = (MyWorld) getWorld();
             world.createFly();
             world.changeScore();
+            screech.play();
         }
     }
 }

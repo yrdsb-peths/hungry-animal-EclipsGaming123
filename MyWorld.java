@@ -19,7 +19,7 @@ public class MyWorld extends World
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600,600,1); 
+        super(600,600,1, false); 
         spider x = new spider();
         addObject(x,300,500);
         score = new Label(scoreValue, 50);
@@ -41,4 +41,9 @@ public class MyWorld extends World
         score.setValue(scoreValue);
     }
     
+    public void gameOver()
+    {
+        Label lost = new Label("Game Over", 100);
+        addObject(lost, 300,300);
+    }
 }
