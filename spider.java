@@ -44,6 +44,7 @@ public class spider extends Actor
             removeTouching(fly.class);
             MyWorld world = (MyWorld) getWorld();
             world.createFly();
+            world.changeScore();
         }
     }
 }

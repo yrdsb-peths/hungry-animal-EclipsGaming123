@@ -26,6 +26,7 @@ public class Label extends Actor
      */
     public Label(int value, int fontSize)
     {
+        
         this(Integer.toString(value), fontSize);
     }
     
