@@ -18,5 +18,14 @@ public class fly extends Actor
         int x = getX();
         // Add your action code here.
         setLocation(x,y + 2);
-    }    
+    }
+    
+    public void endGame()
+    {
+        if (getHeight() >= world.getHeight())
+        {
+            world.gameOver();
+            removeObject(this);
+        }
+    }
 }
